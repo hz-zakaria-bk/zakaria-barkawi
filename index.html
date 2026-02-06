@@ -1,157 +1,1081 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zakaria Barkawi - Official Website</title>
-  <meta name="google-site-verification" content="n7WaafYsde1ayS7xNA4AUaG7Ue5fjWgmtQPuRfwRi9c" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaria Barkawi | مؤسس HZ Digital</title>
+    <style>
+        @keyframes slideUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        :root {
+            --primary: #1E3A8A;
+            --primary-light: #3B82F6;
+            --primary-dark: #1E40AF;
+            --secondary: #FFFFFF;
+            --secondary-light: #F0F9FF;
+            --white: #FFFFFF;
+            --light-gray: #F8FAFC;
+            --dark-gray: #1E293B;
+            --text: #0F172A;
+        }
+
+        * {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            background-color: var(--white);
+            color: var(--text);
+            font-size: 20px;
+            min-height: 100vh;
+        }
+
+        .employe0, .employe3, .employe5 {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.3em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .employe0::after, .employe3::after, .employe5::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-light);
+        }
+
+        .pemploye {
+            font-size: 24px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            text-align: justify;
+            padding: 0 15px;
+            color: var(--dark-gray);
+        }
+
+        .projects {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            padding: 80px 40px;
+            margin: 50px auto;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.2);
+            border: 3px solid var(--white);
+            max-width: 1400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23FFFFFF" opacity="0.1"/></svg>');
+            background-size: cover;
+        }
+
+        .projects p {
+            text-align: center;
+            font-size: 42px;
+            color: var(--white);
+            margin-bottom: 50px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .projects a {
+            color: var(--primary);
+            border-radius: 12px;
+            font-size: 26px;
+            background: var(--white);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 20px;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            font-weight: bold;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .projects a:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border-color: var(--white);
+        }
+
+        .apro {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .h1employe {
+            color: var(--primary);
+            text-align: center;
+            font-size: 56px;
+            margin: 60px 0;
+            padding-bottom: 30px;
+            position: relative;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .h1employe::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            border-radius: 5px;
+        }
+
+        .hzflappys, .hzflappysa, img.hzfalppys {
+            width: 220px;
+            height: 220px;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 50%;
+            border: 8px solid var(--primary);
+            padding: 15px;
+            background: linear-gradient(135deg, var(--primary-light), var(--white));
+            box-shadow: 0 0 40px rgba(30, 58, 138, 0.3);
+            object-fit: cover;
+        }
+
+        .hzcoina {
+            text-decoration: none;
+            padding: 20px 45px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            text-align: center;
+            min-width: 250px;
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            border: 3px solid var(--primary-light);
+            margin: 15px;
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+        }
+
+        .hzcoina:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(30, 58, 138, 0.3);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+            color: var(--white);
+            padding: 25px 0;
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrap {
+            width: 95%;
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .employe1 {
+            text-align: center;
+            font-size: 48px;
+            margin: 70px 0;
+            color: var(--primary);
+            position: relative;
+            padding: 30px;
+            background: linear-gradient(135deg, transparent, var(--light-gray), transparent);
+            border-radius: 20px;
+            font-weight: 800;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            background: var(--white);
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 32px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid var(--primary-light);
+        }
+
+        .employe2 {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 28px;
+            padding: 18px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border: 3px solid var(--white);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .employe2:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .brand-title {
+            font-weight: 900;
+            font-size: 32px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .brand-sub {
+            font-size: 18px;
+            opacity: 0.95;
+            font-style: italic;
+            color: var(--secondary-light);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 20px;
+            border: 2px solid transparent;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul li a:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        nav .btn {
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 30px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            border: 3px solid var(--primary-light);
+            font-weight: bold;
+        }
+
+        nav .btn:hover {
+            background: var(--primary-light);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            min-height: 90vh;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23FFFFFF" opacity="0.05"/><path d="M0,100 L100,0 L100,100 Z" fill="%23FFFFFF" opacity="0.05"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-card {
+            max-width: 1200px;
+            padding: 70px 60px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            margin: 0 30px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            font-weight: 900;
+        }
+
+        .lead {
+            font-size: 32px;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            padding: 0 30px;
+            font-weight: 300;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 22px 45px;
+            border-radius: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            text-align: center;
+            min-width: 280px;
+            border: 3px solid transparent;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-primary {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--primary-light);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 3px solid var(--white);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-primary:hover {
+            background: var(--primary-light);
+            color: var(--white);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .section {
+            width: 95%;
+            max-width: 1800px;
+            margin: 100px auto;
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 70px;
+            color: var(--primary);
+            position: relative;
+            line-height: 1.3;
+            padding-bottom: 25px;
+            font-weight: 900;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 6px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            border-radius: 3px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 45px 35px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 35px rgba(30, 58, 138, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 3px solid var(--primary-light);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+        }
+
+        .card i {
+            font-size: 56px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-light), var(--white));
+            padding: 25px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card h4 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+            font-weight: 900;
+        }
+
+        .card p {
+            color: var(--dark-gray);
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px;
+            background: var(--white);
+            padding: 70px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(30, 58, 138, 0.15);
+            border: 3px solid var(--primary-light);
+            margin: 0 auto;
+            max-width: 1600px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 400px;
+            padding: 30px;
+        }
+
+        .about-text p {
+            margin-bottom: 35px;
+            text-align: justify;
+            font-size: 26px;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .about-media {
+            flex: 1;
+            min-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-media img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--primary);
+            transition: transform 0.5s ease;
+        }
+
+        .about-media img:hover {
+            transform: rotate(-2deg) scale(1.02);
+        }
+
+        .contact {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+            border-radius: 30px;
+            padding: 80px 60px;
+            box-shadow: 0 25px 60px rgba(30, 58, 138, 0.2);
+            text-align: center;
+            margin: 80px auto;
+            border: 4px solid var(--primary-light);
+            max-width: 1200px;
+        }
+
+        .contact h2 {
+            margin-bottom: 50px;
+        }
+
+        .contact p {
+            font-size: 28px;
+            margin-bottom: 40px;
+            line-height: 1.9;
+            padding: 0 30px;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            word-break: break-all;
+            border-bottom: 3px solid var(--primary-light);
+            padding-bottom: 5px;
+            font-size: 28px;
+        }
+
+        .contact a:hover {
+            color: var(--primary-dark);
+            border-bottom-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 28px;
+            transition: all 0.5s ease;
+            border: 3px solid var(--white);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-10px) rotate(360deg);
+            border-color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 70px 40px;
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+            color: var(--white);
+            margin-top: 100px;
+            border-top: 8px solid var(--primary-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23FFFFFF" opacity="0.05"/></svg>');
+            background-size: cover;
+        }
+
+        .footer-content {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 22px;
+            padding: 15px 25px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            background: var(--white);
+            border-color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .footer-logo1 {
+            color: var(--primary);
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--white), var(--light-gray));
+            padding: 18px 35px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 3px solid var(--primary-light);
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .footer-logo1:hover {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .copyright {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 1.6;
+            color: var(--light-gray);
+            max-width: 800px;
+        }
+
+        .company-badge {
+            background: linear-gradient(135deg, var(--primary-light), var(--white));
+            color: var(--primary);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 24px;
+            display: inline-block;
+            margin: 20px 0;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+        }
+
+        .server-expertise {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            padding: 50px;
+            border-radius: 25px;
+            margin: 40px 0;
+            color: var(--white);
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+            border: 3px solid var(--white);
+        }
+
+        @media (max-width: 1200px) {
+            .section {
+                width: 90%;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .lead {
+                font-size: 28px;
+            }
+            
+            .card {
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .employe1 {
+                font-size: 36px;
+                margin: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .lead {
+                font-size: 22px;
+            }
+            
+            .section h2 {
+                font-size: 36px;
+            }
+            
+            .projects a {
+                font-size: 20px;
+                padding: 15px 30px;
+            }
+            
+            .card {
+                padding: 30px 25px;
+                margin: 0 20px;
+            }
+            
+            .about {
+                padding: 40px 25px;
+            }
+            
+            .pemploye {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-card {
+                padding: 40px 25px;
+            }
+            
+            .cta-btn {
+                min-width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav ul li a {
+                padding: 10px 15px;
+                font-size: 18px;
+            }
+            
+            .h1employe {
+                font-size: 42px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  
-<header>
+    <header>
+        <div class="nav-wrap">
+            <div class="brand">
+                <div class="logo">HZ</div>
+                <div>
+                    <div class="brand-title">Zakaria Barkawi</div>
+                    <div class="brand-sub">مؤسس شركة HZ Digital</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عنّي</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">التواصل</a></li>
+                    <li><a href="#" class="btn">ابدأ مشروعك</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="nav-wrap">
-  
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-card">
+                <div class="hzflappys">
+                    <i class="fas fa-crown" style="font-size: 120px; color: white; line-height: 220px;"></i>
+                </div>
+                <h1 class="h1employe">Zakaria Barkawi</h1>
+                <div class="company-badge">مؤسس شركة HZ Digital</div>
+                <p class="lead">
+                  </p>
+                <div class="hero-cta">
+                    <a href="#services" class="cta-btn cta-primary">خدماتنا</a>
+                    <a href="#contact" class="cta-btn cta-secondary">تواصل معي</a>
+                </div>
+            </div>
+        </section>
 
-    <div class="brand">
-      
-    
-      
-      <div><div class="brand-title">Zakaria Barkawi</div>
-        <div class="brand-title"></div>
-    
-      </div>
-    </div>
+        <section class="section" id="about">
+            <h2 class="employe1">عنّي</h2>
+            <div class="about">
+                <div class="about-text">
+                    <p class="pemploye">
+                        <span class="employe0">مرحباً، أنا زكريا بركاوي</span> مؤسس شركة HZ Digital، خبير في إدارة السيرفرات وتطوير حلول الويب المتقدمة. 
+                           مع تركيز خاص على حلول البنية التحتية والخوادم.
+                    </p>
+                    <p class="pemploye">
+                        <span class="employe3">تأسست شركة HZ Digital</span> بهدف تقديم حلول تقنية متكاملة للشركات والمؤسسات، 
+                        مع التركيز على الجودة والكفاءة والأمان في جميع المشاريع التي نقوم بتنفيذها.
+                    </p>
+                    <div class="server-expertise">
+                        <i class="fas fa-server"></i><br>
+                        خبرة واسعة في إدارة سيرفرات Linux و Windows
+                    </div>
+                    <p class="pemploye">
+                        <span class="employe5">أؤمن بأن التكنولوجيا</span> يجب أن تكون أداة لتحقيق الأهداف وتطوير الأعمال، 
+                        وليس مجرد حل تقني. لذلك أركز دائماً على فهم احتياجات العملاء وتقديم حلول تناسب أهدافهم.
+                    </p>
+                </div>
+                <div class="about-media">
+                   
+                </div>
+            </div>
+        </section>
 
-    <nav>
-      <ul>
-        <li><a href="#services">خدماتي</a></li>
-        <li><a href="#ourprojects">مشاريعي</a></li>
-        <li><a href="#contact">تواصل معي</a></li>
-        <li><a href="#aboutme">عني</a></li>
-  
-      </ul>
-    </nav>
+        <section class="section" id="services">
+            <h2>خدماتي</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h4>إدارة السيرفرات</h4>
+                    <p>خدمات متكاملة لإدارة وصيانة السيرفرات بأنواعها المختلفة مع ضمان أقصى درجات الأمان والاستقرار.</p>
+                </div>
+               
+              
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h4>قواعد البيانات</h4>
+                    <p>إدارة وتحسين قواعد البيانات مع ضمان سرعة الأداء والأمان والنسخ الاحتياطي المنتظم.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>الشبكات</h4>
+                    <p>تصميم وتنفيذ شبكات متطورة مع ضمان الاتصال المستقر والأداء العالي للأعمال.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-headset"></i>
+                    <h4>تطوير الويب</h4>
+                    <p>تصميم وتطوير مواقع وتطبيقات ويب متكاملة تلبي احتياجات العملاء وتضمن تجربة مستخدم متميزة.</p>
+                </div>
+            </div>
+        </section>
 
-  </div>
+        <section class="contact" id="contact">
+            <h2>التواصل</h2>
+            <p>
+                للاستفسار عن خدماتنا أو لمناقشة مشروعك التقني، يمكنك التواصل معنا عبر:
+            </p>
+            <p>
+                البريد الإلكتروني: <a href="mailto:zakaria@hzdigital.com">berkawi.dev@gmail.com</a>
+            </p>
+            <p>
+                لمعرفة المزيد عن شركة HZ Digital وخدماتنا المتكاملة
+            </p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">HZ Digital</div>
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عنّي</a>
+                <a href="#services">الخدمات</a>
+                <a href="#contact">التواصل</a>
+                <a href="#" class="footer-logo1">اطلب خدمة</a>
+            </div>
+            <p class="copyright">
+                © 2026 جميع الحقوق محفوظة لشركة HZ Digital.<br>
+                تأسست بواسطة Zakaria Barkawi - خبير في إدارة السيرفرات والحلول التقنية المتكاملة
+            </p>
+        </div>
+    </footer>
 
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-</header>
+        // Add scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
 
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, observerOptions);
 
-<section class="hero">
-  <div class="hero-card">
-    <h1>مرحبا بك في موقع الرسمي</h1>
-    <h1>Zakaria Barkawi </h1>
-    <div class="hero-cta">
-      <a href="#services" class="cta-btn cta-primary">استكشف خدماتي</a>
-      <a href="#contact" class="cta-btn cta-secondary">تواصل معي</a>
-    </div>
-  </div>
-</section>
+            // Observe elements for animation
+            document.querySelectorAll('.card, .about-text, .projects, .server-expertise').forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(30px)";
+                el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
+                observer.observe(el);
+            });
+        });
 
-<section id="services" class="section">
-  <h2>خدماتي</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-laptop-code"></i>
-      <h4>تطوير ويب</h4>
-      <p>مواقع متكاملة بتصميم حديث وسرعة عالية.</p>
-    </div>
+        // Add particle effect for hero section
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            for(let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 10 + 5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = 'rgba(255, 255, 255, 0.3)';
+                particle.style.borderRadius = '50%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.zIndex = '0';
+                hero.appendChild(particle);
+                
+                // Animate particle
+                animateParticle(particle);
+            }
+        }
 
-    <div class="card">
-      <i class="fas fa-laptop-code"></i>
-      <h4>بوتات ديسكورد</h4>
-      <p>تطوير بوتات Ai ل سيرفرات ديسكورد</p>
-    </div>
+        function animateParticle(particle) {
+            let x = parseFloat(particle.style.left);
+            let y = parseFloat(particle.style.top);
+            
+            function move() {
+                x += Math.random() * 0.5 - 0.25;
+                y += Math.random() * 0.5 - 0.25;
+                
+                if(x < 0) x = 0;
+                if(x > 100) x = 100;
+                if(y < 0) y = 0;
+                if(y > 100) y = 100;
+                
+                particle.style.left = x + '%';
+                particle.style.top = y + '%';
+                
+                requestAnimationFrame(move);
+            }
+            move();
+        }
 
-    
-</section>
-
-<section id="aboutme" class="section">
-  <h2>عني</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-laptop-code"></i>
-      
-      <p>مؤسس شركة HZ لتطوير مواقع ذكاء الاصطناعي ذكية</p>
-    </div>
-
- 
-
-    
-</section>
-
-
-
-
-
-
-
-<section id="ourprojects" class="secthionpro">
-  <div class="ourprojectsdiv">
-    <h2 class="employe1">مشاريعي مع  HZ</h2>
-    <div class="projects">
-       </div>    
-<div class="card">
-
-      <img src="HZ FLAPPY.png" class="hzflappys">
-      <a class="hzcoina" href="https://hz-company.github.io/hz-flappy-game/">HZ Flappy</a><br><br>
-   
-      <hr>
-   <br>
-
-      <img class="hzfalppys" src="hzcoin.png">
-          <a class="hzcoina" href="https://hz-coin.pages.dev/">HZ Coin</a>
-
-
-<hr>
-<br>
-<br> 
-<img class="hzflappys" src="image.png">
-      <a class="hzcoina" href="https://hz-ai.pages.dev">HZ AI</a>
-
-
-<hr>
-<br>
-
-<h4>رابط شركة HZ الرسمي</h4>
-        <a class="hzcoina" href="https://hzcompany.pages.dev">HZ Company</a>
-<br>
-      <br>
-      <h2 class="employe1">مشاريع قيد التطوير</h2>
-    </div>
-  </div>
-</section>
-
-
-
-<BR> <BR> <BR> <BR>
-
-<section id="contact" class="section contact">
-  <h2>تواصل معي</h2>
-  <p></p>
-  <p>البريد الإلكتروني: 
-    <a href="mailto:hz.web.official@gmail.com">berkawi@gmail.com</a>
-  </p>
-  <div class="social-links">
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/zakaria_barkawi?igsh=dDfqcjBrZ2prZ2k1"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-content">
-
- 
-    </div>
-    <div class="copyright">جميع الحقوق محفوظة &copy; 2026 Zakaria Barkawi</div>
-  </div>
-</footer>
-
+        window.addEventListener('load', createParticles);
+    </script>
 </body>
 </html>
